@@ -55,5 +55,6 @@ public class Params
     $ret = [Params]::SystemParametersInfo($SPI_SETDESKWALLPAPER, 0, $Image, $fWinIni)
 }
 
-Invoke-WebRequest -Uri 'https://github.com/r4mos/Digispark-Duckduino-Fileless/raw/master/Digispark-Duckduino-Fileless/Wallpaper-Changer/Wallpaper.jpg' -OutFile $env:TEMP/Wallpaper.jpg
+Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/r4mos/Digispark-Duckduino-Fileless/main/Digispark-Duckduino-Fileless/Wallpaper-Changer/Wallpaper.jpg' -OutFile $env:TEMP/Wallpaper.jpg
 Set-WallPaper -Image $env:TEMP/Wallpaper.jpg -Style Fill
+Remove-Item $env:TEMP/Wallpaper.jpg
